@@ -63,7 +63,6 @@ const createItems = () => {
 createItems();
 
 const buttons = [...document.querySelectorAll(".item__button")],
-itemBox = document.querySelectorAll('.products__item '),
 generalPrice = document.querySelector('.general-price');
 
 const createPrice = () => {
