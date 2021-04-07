@@ -64,7 +64,7 @@ createItems();
 
 const button = [...document.querySelectorAll(".item__button")],
 itemBox = document.querySelectorAll('.products__item '),
-cartCont = document.querySelector('.general-price');
+generalPrice = document.querySelector('.general-price');
 
 const createPrice = () => {
 let price = 0;
@@ -73,7 +73,7 @@ let elements = button.forEach(function(item) {
     item.disabled = true;
   	let priceText = item.parentElement.querySelector(".item__price").innerText;
    	let priceNum = parseInt(priceText.replace(/\s+/g, ''),10);
-    document.querySelector(".general-price").innerText = price += priceNum;
+    generalPrice.innerText = price += priceNum;
     console.log(aNum);
     });
 });
