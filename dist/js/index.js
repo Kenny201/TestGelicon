@@ -67,14 +67,13 @@ generalPrice = document.querySelector('.general-price');
 
 const createPrice = () => {
 let price = 0;
-let elements = buttons.forEach(function(item) { 
-  item.addEventListener('click', function() {
-    item.disabled = true;
-  	let priceText = item.parentElement.querySelector(".item__price").innerText;
-   	let priceNum = parseInt(priceText.replace(/\s+/g, ''),10);
-    generalPrice.innerText = price += priceNum;
-    console.log(aNum);
+for (let btn of buttons){
+  btn.addEventListener('click', function() {
+    btn.disabled = true;
+  	let priceText = btn.parentElement.querySelector(".item__price").innerText;
+   	let priceNum = parseInt (priceText.replace(/\s+/g, ''),10);
+    document.querySelector(".general-price").innerText = price += priceNum;
     });
-});
+}
 };
 createPrice();
