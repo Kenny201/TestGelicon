@@ -62,13 +62,13 @@ const createItems = () => {
 }
 createItems();
 
-const button = [...document.querySelectorAll(".item__button")],
+const buttons = [...document.querySelectorAll(".item__button")],
 itemBox = document.querySelectorAll('.products__item '),
 generalPrice = document.querySelector('.general-price');
 
 const createPrice = () => {
 let price = 0;
-let elements = button.forEach(function(item) { 
+let elements = buttons.forEach(function(item) { 
   item.addEventListener('click', function() {
     item.disabled = true;
   	let priceText = item.parentElement.querySelector(".item__price").innerText;
