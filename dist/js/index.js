@@ -71,9 +71,9 @@ let price = 0;
 let elements = button.forEach(function(item) { 
   item.addEventListener('click', function() {
     item.disabled = true;
-  	let a = item.parentElement.querySelector(".item__price").innerText;
-   	let aNum = parseInt(a.replace(/\s+/g, ''),10);
-    document.querySelector(".general-price").innerText = price += aNum;
+  	let priceText = item.parentElement.querySelector(".item__price").innerText;
+   	let priceNum = parseInt(priceText.replace(/\s+/g, ''),10);
+    document.querySelector(".general-price").innerText = price += priceNum;
     console.log(aNum);
     });
 });
