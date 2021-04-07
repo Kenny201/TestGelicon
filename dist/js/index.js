@@ -62,10 +62,20 @@ const createItems = () => {
 }
 createItems();
 
-const button = document.querySelector(".item__button"),
-itemBox = document.querySelectorAll('.products__item '), // блок каждого товара
+const button = [...document.querySelectorAll(".item__button")],
+itemBox = document.querySelectorAll('.products__item '),
 cartCont = document.querySelector('.general-price');
-button.addEventListener("click", function(e) {
-    console.log(this.closest('item__price'));
 
+const createPrice = () => {
+let price = 0;
+let elements = button.forEach(function(item) { 
+  item.addEventListener('click', function() {
+    item.disabled = true;
+  	let a = item.parentElement.querySelector(".item__price").innerText;
+   	let aNum = parseInt(a.replace(/\s+/g, ''),10);
+    document.querySelector(".general-price").innerText = price += aNum;
+    console.log(aNum);
+    });
 });
+};
+createPrice();
