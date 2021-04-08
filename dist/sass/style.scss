@@ -38,12 +38,13 @@ h1 {
     .products__content {
         margin: 80px 0 60px 0;
     }
-
+    .product-item__wrap{
+        height: 100%;
+    }
     .product-item {
         text-align: center;
         background-color: #fff;
         padding: 50px 30px 30px 30px;
-        height: 100%;
 
         &:not(:nth-child(1)) {
             margin: 50px 0 0 0;
@@ -135,10 +136,6 @@ h1 {
 
 @include media-breakpoint-up(lg) {
     .product-item {
-        &:nth-child(2) {
-            margin: 0 30px;
-        }
-
         &__button {
             font-size: 1.125rem;
         }

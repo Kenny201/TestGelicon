@@ -28,7 +28,8 @@ const createItems = () => {
     const item = Object.values(db_product)
     .map(( {alt, title, images,main, price}, index) => (
         `
-        <div class = "product-item col-sm-10 col-md ">
+        <div class = "product-item_wrap col-sm-10 col-md ">
+        <div class = "product-item ">
                 <div class = "product-item__title">
                     ${title}
                 </div>
@@ -42,7 +43,7 @@ const createItems = () => {
                     ${Number(price).toLocaleString()} Руб.
                 </div>
                 <button data-id="${index}" class="product-item__button " /> Добавить в корзину </button>
-
+        </div>
         </div> 
         `
     )).join('')
