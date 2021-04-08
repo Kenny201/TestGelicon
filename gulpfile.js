@@ -5,6 +5,7 @@ const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const uglify = require("gulp-uglify");
+const babel = require('gulp-babel');
 const concat = require("gulp-concat");
 const pug = require("gulp-pug");
 const plumber = require("gulp-plumber");
@@ -20,11 +21,14 @@ gulp.task('libs', () => {
 gulp.task('scripts', () => {
     return gulp.src('./dist/js/index.js')
         .pipe(plumber())
+        .pipe(babel({
+            presets: ["@babel/preset-env"]
+        }))
         .pipe(uglify())
         .pipe(gulp.dest('./public/js/'))
 });
 gulp.task('styles', () => {
-    return gulp.src("./dist/sass/*.+(scss|sass)")
+    return gulp.src("./dist/sass/style.+(scss|sass)")
         .pipe(plumber())
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(rename({suffix: '.min', prefix: ''}))

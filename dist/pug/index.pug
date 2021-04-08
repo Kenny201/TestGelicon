@@ -7,14 +7,18 @@ html(lang="en")
         link(rel="stylesheet" href="style/style.min.css")
         title Document
     body
-        .header
-            .container 
-                .header__title   Будущий интернет магазин 
-        .content
-            .container 
-                .products
-                .general-price
-        .footer 
+        .products
             .container
+                .products-header
+                        .products-header__title
+                            h1  Заголовок блока
+                        .products-header__subtitle Подзаголовок блока  
+                .products-content
+                    .row.justify-content-center
+        .products-footer
+            .container
+                .products-footer__text.price-text ОБЩАЯ СУММА: 
+                    span.price-text__num.price-text__num--color 0  
+                    | &nbsp;руб
     script(src="js/index.js") 
     script(src="js/libs.js") 
