@@ -8,17 +8,18 @@ html(lang="en")
         title Document
     body
         .products
-            .container
                 .products-header
+                    .container
                         .products-header__title
                             h1  Заголовок блока
                         .products-header__subtitle Подзаголовок блока  
                 .products-content
-                    .row.justify-content-center
-        .products-footer
-            .container
-                .products-footer__text.price-text ОБЩАЯ СУММА: 
-                    span.price-text__num.price-text__num--color 0  
-                    | &nbsp;руб
+                    .container
+                        .row.justify-content-center
+                .products-footer
+                    .container
+                        .products-footer__text.price-text ОБЩАЯ СУММА: 
+                            span.price-text__num.price-text__num--color 0  
+                            | &nbsp;руб
     script(src="js/index.js") 
     script(src="js/libs.js") 
