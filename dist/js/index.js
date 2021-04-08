@@ -19,7 +19,8 @@ const db_product = {
         images: './images/bravo-30.png',
         main: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis rhoncus mi. Duis ultrices augue nunc, sit amet placerat ligula pretium vel. Aenean eget quam ante.  Proin tempus nulla quis erat blandit vehicula.  Aenean eget quam ante. Duis ipsum dui, euismod id tristique id, consectetur vitae enim. ',
         price: '1600',
-    } 
+    },
+    
 };
 
 const products = document.querySelector(".products__content .row");
@@ -28,22 +29,20 @@ const createItems = () => {
     const item = Object.values(db_product)
     .map(( {alt, title, images,main, price}, index) => (
         `
-        <div class = "product-item_wrap col-sm-10 col-md ">
-        <div class = "product-item ">
-                <div class = "product-item__title">
-                    ${title}
-                </div>
-                <div class = "product-item__img">
-                    <img src="${images}" alt="${alt}">
-                </div>
-                <div class="product-item__text">
-                    ${main}
-                </div>
-                <div class = "product-item__price">
-                    ${Number(price).toLocaleString()} Руб.
-                </div>
-                <button data-id="${index}" class="product-item__button " /> Добавить в корзину </button>
-        </div>
+            <div class = "product-item col-sm-10 col-md ">
+                        <div class = "product-item__title">
+                            ${title}
+                        </div>
+                        <div class = "product-item__img">
+                            <img src="${images}" alt="${alt}">
+                        </div>
+                        <div class="product-item__text">
+                            ${main}
+                        </div>
+                        <div class = "product-item__price">
+                            ${Number(price).toLocaleString()} Руб.
+                        </div>
+                        <button data-id="${index}" class="product-item__button " /> Добавить в корзину </button>
         </div> 
         `
     )).join('')
