@@ -23,7 +23,7 @@ const db_product = {
     
 };
 
-const products = document.querySelector(".products__content .row");
+const products = document.querySelector(".products__content-wrap");
 
 const createItems = () => {
     const item = Object.values(db_product)
