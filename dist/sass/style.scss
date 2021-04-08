@@ -22,20 +22,20 @@ h1 {
         padding: 100px 0 0 0;
     }
 
-    .products-header {
+    .products__header {
         text-align: center;
 
-        &__title {
+        &__header-title {
             margin: 0 0 32px 0;
         }
 
-        &__subtitle {
+        &__header-subtitle {
             font-size: 1.5rem;
             font-weight: 700;
         }
     }
 
-    .products-content {
+    .products__content {
         margin: 80px 0 60px 0;
     }
 
@@ -94,7 +94,7 @@ h1 {
         }
     }
 
-    .products-footer {
+    .products__footer {
         padding: 60px 0;
         background-color: #fff;
     }
