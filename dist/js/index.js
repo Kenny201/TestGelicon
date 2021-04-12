@@ -42,7 +42,7 @@ const createItems = () => {
                         <div class = "product-item__price">
                             ${Number(price).toLocaleString()} Руб.
                         </div>
-                        <button data-id="${index}" class="product-item__button " /> Добавить в корзину </button>
+                        <button data-id="${index}" class="product-item__button "> Добавить в корзину </button>
         </div> 
         `
     )).join('')
